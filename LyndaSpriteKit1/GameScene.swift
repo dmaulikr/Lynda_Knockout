@@ -63,11 +63,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     override func touchesMoved(touches: NSSet, withEvent event: UIEvent) {
         for touch: AnyObject in touches {
             let location = touch.locationInNode(self)
-            paddle.position = CGPointMake(playerBounds(CGFloat(location.x)), CGFloat(paddleDistanceFromBottom))
+            paddle.position = CGPointMake(paddleEdgeBounds(CGFloat(location.x)), CGFloat(paddleDistanceFromBottom))
         }
     }
     
-    func playerBounds(xPosition: CGFloat) -> CGFloat {
+    func paddleEdgeBounds(xPosition: CGFloat) -> CGFloat {
         let minX = paddle.frame.size.width/2
         let maxX = size.width - paddle.frame.size.width/2
         if xPosition < minX {
