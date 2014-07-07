@@ -16,7 +16,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     // load art assets
     let paddle = SKSpriteNode(imageNamed: "Paddle")
-    let brick = SKSpriteNode(imageNamed: "Brick")
     let ball = SKSpriteNode(imageNamed: "Ball")
 
     // load sound assets
@@ -122,6 +121,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func addBrick(index: CGFloat) {
+        let brick = SKSpriteNode(imageNamed: "Brick")
         let xPos = size.width/5.0 * (index + 1.0)
         let yPos = size.height - 50.0
         brick.position = CGPointMake(xPos, yPos)
