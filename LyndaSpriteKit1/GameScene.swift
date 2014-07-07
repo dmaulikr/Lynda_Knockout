@@ -10,14 +10,20 @@ import SpriteKit
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
+    // game constants
     let ballSpeed = 7.0
+    let paddleDistanceFromBottom = 50.0
+    
+    // load art assets
     let paddle = SKSpriteNode(imageNamed: "Paddle")
+    let brick = SKSpriteNode(imageNamed: "Brick")
     let ball = SKSpriteNode(imageNamed: "Ball")
-    let playerY = 50.0
+
+    // load sound assets
     let paddleSound = SKAction.playSoundFileNamed("blip.wav", waitForCompletion: false)
     let brickSound = SKAction.playSoundFileNamed("explosion.wav", waitForCompletion: false)
     
-//    setup bitmask categories using bitwise operators
+    // setup bitmask categories using bitwise operators
     let ballCategory: UInt32 = 0x1
     let brickCategory: UInt32 = 0x1 << 1
     let paddleCategory: UInt32 = 0x1 << 2
@@ -57,8 +63,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     override func touchesMoved(touches: NSSet, withEvent event: UIEvent) {
         for touch: AnyObject in touches {
             let location = touch.locationInNode(self)
-            let newPosition = CGPointMake(playerBounds(CGFloat(location.x)), CGFloat(playerY))
-            paddle.position = newPosition
+            paddle.position = CGPointMake(playerBounds(CGFloat(location.x)), CGFloat(paddleDistanceFromBottom))
         }
     }
     
@@ -102,7 +107,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func addPlayer() {
-        paddle.position = CGPointMake(size.width/2, CGFloat(playerY))
+        paddle.position = CGPointMake(size.width/2, CGFloat(paddleDistanceFromBottom))
         paddle.physicsBody = SKPhysicsBody(rectangleOfSize: paddle.frame.size)
         paddle.physicsBody.dynamic = false
         paddle.physicsBody.categoryBitMask = paddleCategory
@@ -117,7 +122,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func addBrick(index: CGFloat) {
-        let brick = SKSpriteNode(imageNamed: "Brick")
         let xPos = size.width/5.0 * (index + 1.0)
         let yPos = size.height - 50.0
         brick.position = CGPointMake(xPos, yPos)
