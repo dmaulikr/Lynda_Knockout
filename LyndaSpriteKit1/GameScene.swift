@@ -13,7 +13,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let ballSpeed = 7.0
     let paddle = SKSpriteNode(imageNamed: "Paddle")
     let ball = SKSpriteNode(imageNamed: "Ball")
-    var bricks: SKSpriteNode[] = []
     let playerY = 50.0
     let paddleSound = SKAction.playSoundFileNamed("blip.wav", waitForCompletion: false)
     let brickSound = SKAction.playSoundFileNamed("explosion.wav", waitForCompletion: false)
@@ -126,7 +125,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         brick.physicsBody.dynamic = false
         brick.physicsBody.categoryBitMask = brickCategory
         addChild(brick)
-        bricks.append(brick)
     }
     
 
