@@ -11,8 +11,8 @@ import SpriteKit
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
     // game constants
-    let ballSpeed = 7.0
-    let paddleDistanceFromBottom = 50.0
+    let ballSpeed: CGFloat = 7.0
+    let paddleDistanceFromBottom: CGFloat = 50.0
     
     // load art assets
     let paddle = SKSpriteNode(imageNamed: "Paddle")
@@ -62,7 +62,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     override func touchesMoved(touches: NSSet, withEvent event: UIEvent) {
         for touch: AnyObject in touches {
             let location = touch.locationInNode(self)
-            paddle.position = CGPointMake(paddleEdgeBounds(CGFloat(location.x)), CGFloat(paddleDistanceFromBottom))
+            paddle.position = CGPointMake(paddleEdgeBounds(CGFloat(location.x)), paddleDistanceFromBottom)
         }
     }
     
@@ -102,11 +102,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         ball.physicsBody.contactTestBitMask = brickCategory | paddleCategory | bottomEdgeCategory
         ball.position = CGPointMake(size.width/2, size.height/2)
         addChild(ball)
-        ball.physicsBody.applyImpulse(CGVectorMake(CGFloat(ballSpeed), CGFloat(ballSpeed)))
+        ball.physicsBody.applyImpulse(CGVectorMake(ballSpeed, ballSpeed))
     }
     
     func addPlayer() {
-        paddle.position = CGPointMake(size.width/2, CGFloat(paddleDistanceFromBottom))
+        paddle.position = CGPointMake(size.width/2, paddleDistanceFromBottom)
         paddle.physicsBody = SKPhysicsBody(rectangleOfSize: paddle.frame.size)
         paddle.physicsBody.dynamic = false
         paddle.physicsBody.categoryBitMask = paddleCategory
