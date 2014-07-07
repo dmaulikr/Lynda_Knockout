@@ -14,6 +14,10 @@
 		38A62E7619675587007AE8E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38A62E7419675587007AE8E0 /* Main.storyboard */; };
 		38A62E7819675587007AE8E0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38A62E7719675587007AE8E0 /* Images.xcassets */; };
 		38A62E8419675587007AE8E0 /* LyndaSpriteKit1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A62E8319675587007AE8E0 /* LyndaSpriteKit1Tests.swift */; };
+		38D98BFC1967B49200B470D8 /* blip.wav in Resources */ = {isa = PBXBuildFile; fileRef = 38D98BFB1967B49200B470D8 /* blip.wav */; };
+		38D98BFE1967B57100B470D8 /* explosion.wav in Resources */ = {isa = PBXBuildFile; fileRef = 38D98BFD1967B57100B470D8 /* explosion.wav */; };
+		38D98C001968359C00B470D8 /* end.wav in Resources */ = {isa = PBXBuildFile; fileRef = 38D98BFF1968359C00B470D8 /* end.wav */; };
+		38FE5FFA196AFBE60037AF56 /* EndScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FE5FF9196AFBE60037AF56 /* EndScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,7 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		38A62E6719675587007AE8E0 /* LyndaSpriteKit1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LyndaSpriteKit1.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		38A62E6719675587007AE8E0 /* Lynda Knockout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lynda Knockout.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		38A62E6B19675587007AE8E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38A62E6C19675587007AE8E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38A62E6E19675587007AE8E0 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -35,9 +39,13 @@
 		38A62E7219675587007AE8E0 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		38A62E7519675587007AE8E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		38A62E7719675587007AE8E0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		38A62E7D19675587007AE8E0 /* LyndaSpriteKit1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LyndaSpriteKit1Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		38A62E7D19675587007AE8E0 /* Lynda KnockoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Lynda KnockoutTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		38A62E8219675587007AE8E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38A62E8319675587007AE8E0 /* LyndaSpriteKit1Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyndaSpriteKit1Tests.swift; sourceTree = "<group>"; };
+		38D98BFB1967B49200B470D8 /* blip.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = blip.wav; sourceTree = "<group>"; };
+		38D98BFD1967B57100B470D8 /* explosion.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = explosion.wav; sourceTree = "<group>"; };
+		38D98BFF1968359C00B470D8 /* end.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = end.wav; sourceTree = "<group>"; };
+		38FE5FF9196AFBE60037AF56 /* EndScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +69,8 @@
 		38A62E5E19675587007AE8E0 = {
 			isa = PBXGroup;
 			children = (
-				38A62E6919675587007AE8E0 /* LyndaSpriteKit1 */,
-				38A62E8019675587007AE8E0 /* LyndaSpriteKit1Tests */,
+				38A62E6919675587007AE8E0 /* LyndaKnockout */,
+				38A62E8019675587007AE8E0 /* LyndaKnockoutTests */,
 				38A62E6819675587007AE8E0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -70,23 +78,28 @@
 		38A62E6819675587007AE8E0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				38A62E6719675587007AE8E0 /* LyndaSpriteKit1.app */,
-				38A62E7D19675587007AE8E0 /* LyndaSpriteKit1Tests.xctest */,
+				38A62E6719675587007AE8E0 /* Lynda Knockout.app */,
+				38A62E7D19675587007AE8E0 /* Lynda KnockoutTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		38A62E6919675587007AE8E0 /* LyndaSpriteKit1 */ = {
+		38A62E6919675587007AE8E0 /* LyndaKnockout */ = {
 			isa = PBXGroup;
 			children = (
 				38A62E6C19675587007AE8E0 /* AppDelegate.swift */,
 				38A62E6E19675587007AE8E0 /* GameScene.sks */,
 				38A62E7019675587007AE8E0 /* GameScene.swift */,
+				38D98BFD1967B57100B470D8 /* explosion.wav */,
 				38A62E7219675587007AE8E0 /* GameViewController.swift */,
+				38FE5FF9196AFBE60037AF56 /* EndScene.swift */,
+				38D98BFF1968359C00B470D8 /* end.wav */,
 				38A62E7419675587007AE8E0 /* Main.storyboard */,
+				38D98BFB1967B49200B470D8 /* blip.wav */,
 				38A62E7719675587007AE8E0 /* Images.xcassets */,
 				38A62E6A19675587007AE8E0 /* Supporting Files */,
 			);
+			name = LyndaKnockout;
 			path = LyndaSpriteKit1;
 			sourceTree = "<group>";
 		};
@@ -98,12 +111,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		38A62E8019675587007AE8E0 /* LyndaSpriteKit1Tests */ = {
+		38A62E8019675587007AE8E0 /* LyndaKnockoutTests */ = {
 			isa = PBXGroup;
 			children = (
 				38A62E8319675587007AE8E0 /* LyndaSpriteKit1Tests.swift */,
 				38A62E8119675587007AE8E0 /* Supporting Files */,
 			);
+			name = LyndaKnockoutTests;
 			path = LyndaSpriteKit1Tests;
 			sourceTree = "<group>";
 		};
@@ -118,9 +132,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		38A62E6619675587007AE8E0 /* LyndaSpriteKit1 */ = {
+		38A62E6619675587007AE8E0 /* Lynda Knockout */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 38A62E8719675587007AE8E0 /* Build configuration list for PBXNativeTarget "LyndaSpriteKit1" */;
+			buildConfigurationList = 38A62E8719675587007AE8E0 /* Build configuration list for PBXNativeTarget "Lynda Knockout" */;
 			buildPhases = (
 				38A62E6319675587007AE8E0 /* Sources */,
 				38A62E6419675587007AE8E0 /* Frameworks */,
@@ -130,14 +144,14 @@
 			);
 			dependencies = (
 			);
-			name = LyndaSpriteKit1;
+			name = "Lynda Knockout";
 			productName = LyndaSpriteKit1;
-			productReference = 38A62E6719675587007AE8E0 /* LyndaSpriteKit1.app */;
+			productReference = 38A62E6719675587007AE8E0 /* Lynda Knockout.app */;
 			productType = "com.apple.product-type.application";
 		};
-		38A62E7C19675587007AE8E0 /* LyndaSpriteKit1Tests */ = {
+		38A62E7C19675587007AE8E0 /* Lynda KnockoutTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 38A62E8A19675587007AE8E0 /* Build configuration list for PBXNativeTarget "LyndaSpriteKit1Tests" */;
+			buildConfigurationList = 38A62E8A19675587007AE8E0 /* Build configuration list for PBXNativeTarget "Lynda KnockoutTests" */;
 			buildPhases = (
 				38A62E7919675587007AE8E0 /* Sources */,
 				38A62E7A19675587007AE8E0 /* Frameworks */,
@@ -148,9 +162,9 @@
 			dependencies = (
 				38A62E7F19675587007AE8E0 /* PBXTargetDependency */,
 			);
-			name = LyndaSpriteKit1Tests;
+			name = "Lynda KnockoutTests";
 			productName = LyndaSpriteKit1Tests;
-			productReference = 38A62E7D19675587007AE8E0 /* LyndaSpriteKit1Tests.xctest */;
+			productReference = 38A62E7D19675587007AE8E0 /* Lynda KnockoutTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -171,7 +185,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 38A62E6219675587007AE8E0 /* Build configuration list for PBXProject "LyndaSpriteKit1" */;
+			buildConfigurationList = 38A62E6219675587007AE8E0 /* Build configuration list for PBXProject "Lynda Knockout" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -184,8 +198,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				38A62E6619675587007AE8E0 /* LyndaSpriteKit1 */,
-				38A62E7C19675587007AE8E0 /* LyndaSpriteKit1Tests */,
+				38A62E6619675587007AE8E0 /* Lynda Knockout */,
+				38A62E7C19675587007AE8E0 /* Lynda KnockoutTests */,
 			);
 		};
 /* End PBXProject section */
@@ -195,6 +209,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38D98C001968359C00B470D8 /* end.wav in Resources */,
+				38D98BFE1967B57100B470D8 /* explosion.wav in Resources */,
+				38D98BFC1967B49200B470D8 /* blip.wav in Resources */,
 				38A62E7819675587007AE8E0 /* Images.xcassets in Resources */,
 				38A62E6F19675587007AE8E0 /* GameScene.sks in Resources */,
 				38A62E7619675587007AE8E0 /* Main.storyboard in Resources */,
@@ -217,6 +234,7 @@
 			files = (
 				38A62E7119675587007AE8E0 /* GameScene.swift in Sources */,
 				38A62E7319675587007AE8E0 /* GameViewController.swift in Sources */,
+				38FE5FFA196AFBE60037AF56 /* EndScene.swift in Sources */,
 				38A62E6D19675587007AE8E0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -234,7 +252,7 @@
 /* Begin PBXTargetDependency section */
 		38A62E7F19675587007AE8E0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 38A62E6619675587007AE8E0 /* LyndaSpriteKit1 */;
+			target = 38A62E6619675587007AE8E0 /* Lynda Knockout */;
 			targetProxy = 38A62E7E19675587007AE8E0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -335,7 +353,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = LyndaSpriteKit1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Lynda Knockout";
 			};
 			name = Debug;
 		};
@@ -346,7 +364,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = LyndaSpriteKit1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Lynda Knockout";
 			};
 			name = Release;
 		};
@@ -365,7 +383,7 @@
 				INFOPLIST_FILE = LyndaSpriteKit1Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Lynda KnockoutTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Debug;
@@ -381,7 +399,7 @@
 				INFOPLIST_FILE = LyndaSpriteKit1Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Lynda KnockoutTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Release;
@@ -389,7 +407,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		38A62E6219675587007AE8E0 /* Build configuration list for PBXProject "LyndaSpriteKit1" */ = {
+		38A62E6219675587007AE8E0 /* Build configuration list for PBXProject "Lynda Knockout" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				38A62E8519675587007AE8E0 /* Debug */,
@@ -398,21 +416,23 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		38A62E8719675587007AE8E0 /* Build configuration list for PBXNativeTarget "LyndaSpriteKit1" */ = {
+		38A62E8719675587007AE8E0 /* Build configuration list for PBXNativeTarget "Lynda Knockout" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				38A62E8819675587007AE8E0 /* Debug */,
 				38A62E8919675587007AE8E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		38A62E8A19675587007AE8E0 /* Build configuration list for PBXNativeTarget "LyndaSpriteKit1Tests" */ = {
+		38A62E8A19675587007AE8E0 /* Build configuration list for PBXNativeTarget "Lynda KnockoutTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				38A62E8B19675587007AE8E0 /* Debug */,
 				38A62E8C19675587007AE8E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
